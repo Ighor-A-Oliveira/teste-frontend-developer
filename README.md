@@ -48,8 +48,8 @@ Para que o formulário aponte para o seu ambiente local em vez da API de produç
 *   `/public/dist`: CSS compilado.
 *   `/public/scss`: Arquivos fonte Sass (estilização modular).
 *   `/public/js`: Lógica de animações e comportamento.
-*   `/api`: Scripts PHP de conexão e tratamento de dados.
 *   `/public/assets`: Identidade visual e imagens.
+*   `/api`: Scripts PHP de conexão e tratamento de dados.
 
 ---
 
