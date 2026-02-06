@@ -1,58 +1,65 @@
-# Teste para estágio Frontend e Full-Stack
+# 🚀 Landing Page Challenge - Ellos Design
 
-## Sobre a Ellos Design
+Este projeto foi desenvolvido como parte do processo seletivo para a vaga de estágio na **Ellos Design**. O objetivo foi transformar um esqueleto estrutural em uma landing page moderna, responsiva e funcional, aplicando boas práticas de desenvolvimento.
 
-A **Ellos Design** é uma agência de marketing e criação de sites localizada em Guarulhos / SP. Somos uma empresa em constante evolução e sempre estamos abertos para pessoas que gostem de tecnologia e queiram trabalhar na área, mas que principalmente queiram aprender e crescer com a nossa empresa.
+---
 
-## Sobre o teste
+## 🎨 O Projeto
+Acesse o projeto rodando ao vivo junto de um banco que subi no railway: https://teste-frontend-developer-22hwny534-ighor-alves-projects.vercel.app/
 
-Este é um teste prático que desenvolvemos para a avaliação dos candidatos participantes de nosso processo seletivo para vagas de Frontend ou Full-Stack.
+> **Conceito:** Para este desafio, criei a marca fictícia "Vex Core", focada em Soluções de Cibersegurança, utilizando uma paleta de cores Dark Mode com detalhes em Neon para transmitir modernidade e inovação.
 
-## Tecnologias para o desafio
+---
 
-Você deve utilizar as seguintes tecnologias para o desenvolvimento do teste:
+## 🛠️ Tecnologias Utilizadas
 
-- HTML5
-- CSS
-- JavaScript ou jQuery
-- PHP (Para Full-Stack)
-- MySQL (Para Full-Stack)
+### Frontend:
+*   **HTML5** (Estrutura semântica)
+*   **Sass / SCSS** (Pré-processador de CSS para organização e variáveis)
+*   **JavaScript (Vanilla)** (Lógica de interação e comportamento)
 
-## O que nos impressionaria no teste
+### Backend & Database (Trilha Full-Stack):
+*   **PHP** (Processamento dos dados do formulário)
+*   **MySQL** (Armazenamento de leads/contatos)
 
-- Utilização de um pré-processador para o CSS (De preferência o Sass)
-- Aplicação de animações em CSS (Ex: Animações ao realizar scroll)
-- Ver o teste rodando em live (Bucket estático S3, Heroku, Firebase Hosting, etc)
-- Documentação do projeto (Com instruções para executar)
+---
 
-## O que avaliaremos no seu teste
+## ⚙️ Instruções para Execução
 
-- Criatividade
-- Organização do código
-- Performance do código
-- Boas práticas de desenvolvimento
-- Documentação do código
-- Adaptação mobile (layout responsivo)
-- Documentação do projeto (Com instruções para executar)
+### 1. Requisitos Prévios
+*   Servidor local (XAMPP, Laragon ou WampServer) para processar o PHP.
+*   Navegador moderno.
 
-## Etapas para realização do teste
+### 2. Configuração do Banco de Dados
+1.  Abra o seu gerenciador de banco de dados (ex: phpMyAdmin).
+2.  Crie o banco de dados.
+3.  Importe o arquivo `db.sql` que se encontra no repositório, ele possui toda a estrutura do banco.
 
-- Faça um [fork](https://github.com/Ellos-Design/teste-frontend-developer/fork) desse projeto em sua conta do GitHub
-- Realize o desafio proposto
-- Faça um push para seu repositório com o desafio implementado
-- Envie um email para (vagas@ellosdesign.com.br) com a URL do seu projeto avisando que você concluiu o teste
+### 3. Rodando o Projeto
+1.  Clone este repositório na pasta `www` ou `htdocs` do seu servidor local.
+2.  Certifique-se de que o Apache e o MySQL estão ativos.
+3.  Acesse `localhost/NOME_DO_REPO` no seu navegador.
 
-## O desafio
+---
 
-Você deverá desenvolver uma landing page seguindo a estrutura exibida na imagem abaixo. Você pode utilizar os textos e imagens de sua preferência para a criação da página.
+## 📂 Organização do Código
+A estrutura de pastas foi pensada para facilitar a manutenção:
 
-#### Full-Stack
+*   `/css`: Arquivos CSS finais compilados.
+*   `/scss`: Código fonte original em Sass.
+*   `/js`: Scripts de animação e validação.
+*   `/php`: Lógica de conexão e inserção no banco.
+*   `/sql`: Script para criação da estrutura do banco de dados.
+*   `/assets`: Imagens, logotipos e ícones.
 
-Deixar o formulário da landing page funcional, onde ao preencher as informações e clicar para enviar, o formulário será submetido e os dados deverão ser gravados em um banco de dados (Neste caso será necessário nos enviar o arquivo SQL para podermos implementar o banco para avaliação do teste).
+---
 
-> [!IMPORTANT]
-> Atenção: O mockup abaixo é apenas um esqueleto estrutural. Não queremos que você replique o design cinza e estático do modelo. Use sua criatividade para definir uma marca fictícia (ou real), escolher uma paleta de cores, tipografia e imagens que deem vida ao projeto. Sinta-se livre para adaptar o layout, desde que mantenha os elementos essenciais.
+## 📝 O que foi entregue (Checklist)
+- [x] Layout responsivo (Mobile First).
+- [x] Utilização de Sass.
+- [x] Formulário salvando dados no MySQL.
 
-![Template da página a ser desenvolvida](https://github.com/Ellos-Design/teste-frontend-developer/blob/master/wireframe.png?raw=true)
+---
 
-**Boa sorte! Use sua criatividade e mostre do que você é capaz.**
+## 👤 Autor
+Desenvolvido por **Ighor Alves de Oliveira**
