@@ -1,0 +1,60 @@
+@use '../util/functions' as f;
+@use '../util/' as u;
+
+
+.flex {
+    padding-top: 20px;
+
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    
+    
+
+    &__logo{
+        color: var(--text-light);
+        font-family: 'Montserrat', sans-serif;
+        cursor: pointer;
+        user-select: none;
+
+        &--1{
+            font-weight: 800;
+            letter-spacing: f.to-rem(-1);
+            font-size: clamp(f.to-rem(22), 1.2rem + 3vw, f.to-rem(46));
+            line-height: 1;
+        }
+
+        &--2{
+            font-weight: 200;
+            letter-spacing: f.to-rem(4);
+            font-size: clamp(f.to-rem(14), 0.8rem + 1.5vw, f.to-rem(22));
+            margin-left: f.to-rem(8);
+            opacity: 0.8;
+        }
+    }
+
+
+    &__phone {
+        
+        p {
+            color: var(purple-dark);
+            padding: 5px 10px;
+            border-radius: 10px;
+            background-color: var( --neutral-light);
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+            font-weight: 300;
+            font-size: clamp(f.to-rem(10), 0.7rem + 1.5vw, f.to-rem(20));
+
+            @include u.maior-que(md) {
+                flex-wrap: nowrap;
+                padding: 10px 20px;
+            }
+        }
+    }
+}
+
+
+
+
+

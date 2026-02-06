@@ -1,0 +1,114 @@
+@use '../util/functions' as f;
+@use '../util/' as u;
+
+.services {
+    padding-inline: 20px;
+    padding: 30px 0;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto auto auto auto auto;
+    background-color: var(--purple-dark);
+    color: var(--text-light);
+    justify-content: center;
+
+    @include u.maior-que(md) {
+        padding-inline: 25px;
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto auto auto;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    @include u.maior-que(lg) {
+        padding-inline: 50px;
+    }
+
+    @include u.maior-que(xl) {
+        padding-inline: 80px;
+    }
+    @include u.maior-que(xxl) {
+        padding-inline: 150px;
+    }
+    
+    @include u.maior-que(xxxl) {
+        padding-inline: 300px;
+    }
+    
+    h1,button {
+        
+        text-align: center;
+
+        @include u.maior-que(md) {
+            grid-column: span 2;
+        }
+
+    }
+
+    button {
+        width: 330px;
+        margin: 0 auto;
+        padding: 20px 10px;
+        border-radius: 10px;
+        -webkit-appearance: none;
+        appearance: none;
+        outline: none;
+        box-shadow: none;
+        border: none;
+        background-color: var(--text-light);
+        color: var(--purple-dark);
+        font-family: "Inter", sans-serif;
+        font-size: clamp(f.to-rem(14), f.to-rem(8) + 0.8vw, f.to-rem(20));
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+    }
+
+    button:hover {
+        font-weight: 700;
+        font-size: clamp(f.to-rem(10), f.to-rem(8) + 0.8vw, f.to-rem(20));
+    }
+
+    button:focus {
+        outline: 0;
+    }
+
+    &__container--column {
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        h4,h5 {
+            margin: 0;
+            margin-bottom: 10px;
+        }
+    }
+
+    &__container--row {
+        display: flex;
+        align-items: center;
+        max-width: 320px;  
+        height: 175px; 
+        margin-bottom: 20px;
+        border-radius: 20px;
+        padding: 20px;
+        transition: all 0.3s ease-in-out;
+        
+
+        @include u.maior-que(xl) {
+            max-width: 500px;
+        }
+
+        background-color: var(--purple-light);
+        img {
+            width: 70px;
+            filter: brightness(0) invert(1);
+            margin-right: 20px;
+        }
+    }
+
+    &__container--row:hover {
+        scale: 1.1;
+    }
+
+}
+
