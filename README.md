@@ -45,11 +45,11 @@ Para que o formulário aponte para o seu ambiente local em vez da API de produç
 ---
 
 ## 📂 Organização do Código
-*   `/css`: CSS compilado.
-*   `/scss`: Arquivos fonte Sass (estilização modular).
-*   `/js`: Lógica de animações e comportamento.
+*   `/public/dist`: CSS compilado.
+*   `/public/scss`: Arquivos fonte Sass (estilização modular).
+*   `/public/js`: Lógica de animações e comportamento.
 *   `/api`: Scripts PHP de conexão e tratamento de dados.
-*   `/assets`: Identidade visual e imagens.
+*   `/public/assets`: Identidade visual e imagens.
 
 ---
 
