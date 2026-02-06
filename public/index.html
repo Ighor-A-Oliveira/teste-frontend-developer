@@ -227,8 +227,11 @@
             const data = Object.fromEntries(formData)
             
             //just a log
-            console.log("Dados do form:", Object.fromEntries(formData));  // ← pra ver o que está enviando
+            console.log("Dados do form:", Object.fromEntries(formData)); 
             
+
+            
+            //para rodar em localhost substituia /api/enviar por ../api/formhandler.inc.php
             //sending data to backend
             fetch('/api/enviar', {
                 method: 'POST',

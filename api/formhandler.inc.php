@@ -12,20 +12,30 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         exit();
     }
 
+    // assigning the vars
     $name = ucfirst(strtolower($data['name'])) ?? '';
     $email = strtolower($data['email']) ?? '';
     $phone = $data['phone'] ?? '';
     $msg = $data['msg'] ?? '';
 
+    // checking if they are empty
     if (empty($name) || empty($email) || empty($phone) || empty($msg)) {
         http_response_code(400);
         echo "Erro: Preencha todos os campos.";
         exit();
     }
 
+    // checking if the phone number is numeric
+    if (!ctype_digit($phone)) {
+        http_response_code(400);
+        echo "Erro: O telefone deve conter apenas números.";
+        exit();
+    }
+
     
 
     try {
+        //db connection
         require_once "dbh.inc.php";
 
         //raw query
