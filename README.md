@@ -39,8 +39,8 @@ Para dar vida ao projeto, desenvolvi a **Vex Core**, uma marca focada em **Ciber
 ### 3. Ajuste para Teste Local
 Para que o formulário aponte para o seu ambiente local em vez da API de produção:
 1. No arquivo `index.html`, localize o método `fetch`.
-2. Altere de: `fetch('/api/enviar')`
-3. Para: `fetch('../api/formhandler.inc.php')`
+2. Altere de: `fetch('/api/enviar'`
+3. Para: `fetch('../api/formhandler.inc.php'`
 
 ---
 
