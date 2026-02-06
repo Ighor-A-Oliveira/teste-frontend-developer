@@ -1,0 +1,41 @@
+@use '../util/functions' as f;
+@use '../util/' as u;
+
+.footer {
+    background-color: var(--footer);
+    padding: 25px;
+    width: 100%;
+    color: var(--text-light);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+
+    &__copyright {
+        color: var(--text-light);
+        user-select: none;
+
+        &--vex{
+            font-weight: 800;
+            letter-spacing: f.to-rem(-1);
+            font-size: clamp(f.to-rem(12), 1.2rem + 3vw, f.to-rem(22));
+            cursor: pointer;
+            line-height: 1;
+        }
+
+        &--core {
+            font-weight: 200;
+            letter-spacing: f.to-rem(4);
+            font-size: clamp(f.to-rem(8), 0.8rem + 1.5vw, f.to-rem(16));
+            margin-left: f.to-rem(8);
+            cursor: pointer;
+            opacity: 0.8;
+        }
+    }
+
+    &__info span::before  {
+        content: "•";
+        padding: 0.2em;
+    }
+}

@@ -1,0 +1,156 @@
+@use '../util/functions' as f;
+@use '../util/' as u;
+
+.banner {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 50px;
+
+
+    @include u.maior-que(md) {
+        flex-wrap: nowrap;
+    }
+
+    &__left{
+        
+        font-family: 'Roboto', Arial, Helvetica, sans-serif;
+        color: var(--text-light);
+
+        h1{
+            font-weight: 800;
+            font-size: clamp(f.to-rem(32), f.to-rem(16) + 4vw, f.to-rem(64));
+            line-height: 1.1;
+            max-width: f.to-rem(600);
+            margin-bottom: f.to-rem(20);
+        }
+
+        h4 {
+            font-weight: 300;
+            font-size: clamp(f.to-rem(16), f.to-rem(12) + 1vw, f.to-rem(20));
+            line-height: 1.6;
+            max-width: f.to-rem(600);
+        }
+    }
+
+    &__right{
+        width: 100%;
+
+        h1 {
+            color: var(--text-light);
+            font-family: 'Inter', sans-serif;
+        }
+
+        
+        
+        @include u.maior-que(md) {
+            width: 400px;
+        }
+
+        @include u.maior-que(xl) {
+            width: 400px;
+        }
+        @include u.maior-que(xxl) {
+            width: 500px;
+        }
+        
+        
+        
+        &--form{
+            background-color: var(--neutral-light);
+            width: 100%;
+            border-radius: 12px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Montserrat', sans-serif;
+            gap: 15px;
+
+            @include u.maior-que(lg) {
+                padding: 35px;
+                min-height: 500px;
+            }
+            
+            h1 {
+                color: var(--pink);
+                font-size: clamp(f.to-rem(22), f.to-rem(14) + 1vw, f.to-rem(28));
+                font-family: inherit;
+                font-weight: 600;
+                margin-bottom: 25px;
+                letter-spacing: -2px;
+
+                @include u.menor-que(md) {
+                    margin-bottom: 10px;
+                }
+            }
+
+            input, 
+            textarea, 
+            select {
+                width: 100%;
+                display: block;
+                padding: 10px 20px;
+                border-radius: 12px;
+                border: 1px solid var(--black); // Borda padrão sempre visível
+                background-color: white;       // Ou a cor que preferir
+                transition: all 0.3s ease;     // Deixa a mudança de foco suave
+                font-family: inherit;
+                font-weight: 400;
+                font-size: clamp(f.to-rem(10), f.to-rem(10) + 1vw, f.to-rem(22));
+                
+                // Remove o estilo padrão do sistema (iOS/Safari)
+                -webkit-appearance: none;
+                appearance: none;
+
+                // ESTADO DE FOCO (quando clica)
+                &:focus {
+                    outline: none !important; // REMOVE a borda preta/azul padrão
+                    box-shadow: none !important; // Garante que não haja sombra
+                    border-color: var(--pink, purple); // Opcional: escurece a borda ao clicar
+                }
+            }
+
+            // Remove o estilo específico do Firefox
+            button:focus, 
+            input:focus {
+                outline: 0;
+            }
+
+            textarea {
+                height: 200px;
+                width: 100%;
+                resize: none;
+                
+            }
+
+            button {
+                width: 100%;
+                height: 50px;
+                padding: 10px 0;
+                border-radius: 12px;
+                -webkit-appearance: none;
+                appearance: none;
+                outline: none;
+                box-shadow: none;
+                border: none;
+                background-color: var(--purple-dark);
+                color: var( --text-light);
+                font-size: clamp(f.to-rem(12), f.to-rem(10) + 0.8vw, f.to-rem(22));
+                font-weight: bold;
+                transition: all 0.3s ease-in-out;
+            }
+
+            button:hover {
+                cursor: pointer;
+                background-color: var(--pink);
+            }
+            
+            
+        }
+
+    }
+}
