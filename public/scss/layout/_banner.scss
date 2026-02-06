@@ -1,0 +1,152 @@
+@use '../util/functions' as f;
+@use '../util/' as u;
+
+.banner {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: f.to-rem(50);
+    padding-bottom: f.to-rem(50) ;
+
+
+    @include u.maior-que(md) {
+        flex-wrap: nowrap;
+    }
+
+    &__left{
+        
+        font-family: 'Roboto', Arial, Helvetica, sans-serif;
+        color: var(--text-light);
+
+        h1{
+            font-weight: 800;
+            font-size: clamp(f.to-rem(32), f.to-rem(16) + 4vw, f.to-rem(64));
+            line-height: 1.1;
+            max-width: f.to-rem(600);
+            margin-bottom: f.to-rem(20);
+        }
+
+        h4 {
+            font-weight: 300;
+            font-size: clamp(f.to-rem(16), f.to-rem(12) + 1vw, f.to-rem(20));
+            line-height: 1.6;
+            max-width: f.to-rem(600);
+        }
+    }
+
+    &__right{
+        width: 100%;
+
+        h1 {
+            color: var(--text-light);
+            font-family: 'Inter', sans-serif;
+        }
+
+        
+        
+        @include u.maior-que(md) {
+            width: f.to-rem(400);
+        }
+
+
+        @include u.maior-que(xxl) {
+            width: f.to-rem(500);
+        }
+        
+        
+        
+        &--form{
+            background-color: var(--neutral-light);
+            width: 100%;
+            border-radius: f.to-rem(12);
+            padding: f.to-rem(20);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Montserrat', sans-serif;
+            gap: f.to-rem(15);
+
+            @include u.maior-que(lg) {
+                padding: f.to-rem(35);
+                min-height: f.to-rem(500);
+            }
+            
+            h1 {
+                color: var(--pink);
+                font-size: clamp(f.to-rem(22), f.to-rem(14) + 1vw, f.to-rem(28));
+                font-family: inherit;
+                font-weight: 600;
+                margin-bottom: f.to-rem(25);
+                letter-spacing: f.to-rem(-2);
+
+                @include u.menor-que(md) {
+                    margin-bottom: f.to-rem(10);
+                }
+            }
+
+            input, 
+            textarea, 
+            select {
+                width: 100%;
+                display: block;
+                padding: f.to-rem(10) f.to-rem(20);
+                border-radius: f.to-rem(12);
+                border: 1px solid var(--black); 
+                background-color: white;       
+                transition: all 0.3s ease;
+                font-family: inherit;
+                font-weight: 400;
+                font-size: clamp(f.to-rem(10), f.to-rem(10) + 1vw, f.to-rem(22));
+                -webkit-appearance: none;
+                appearance: none;
+
+    
+                &:focus {
+                    outline: none !important; 
+                    box-shadow: none !important; 
+                    border-color: var(--pink, purple); 
+                }
+            }
+
+            button:focus, 
+            input:focus {
+                outline: 0;
+            }
+
+            textarea {
+                height: f.to-rem(200);
+                width: 100%;
+                resize: none;
+                
+            }
+
+            button {
+                width: 100%;
+                height: f.to-rem(50);
+                padding: f.to-rem(10) 0;
+                border-radius: f.to-rem(12);
+                -webkit-appearance: none;
+                appearance: none;
+                outline: none;
+                box-shadow: none;
+                border: none;
+                background-color: var(--purple-dark);
+                color: var( --text-light);
+                font-size: clamp(f.to-rem(12), f.to-rem(10) + 0.8vw, f.to-rem(22));
+                font-weight: bold;
+                transition: all 0.3s ease-in-out;
+            }
+
+            button:hover {
+                cursor: pointer;
+                background-color: var(--pink);
+            }
+            
+            
+        }
+
+    }
+}
