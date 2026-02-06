@@ -9,7 +9,7 @@ Este projeto foi desenvolvido para o processo seletivo de estágio na **Ellos De
 ## 🎨 Conceito: Vex Core
 Para dar vida ao projeto, desenvolvi a **Vex Core**, uma marca focada em **Cibersegurança**. 
 *   **Estética:** Dark Mode com detalhes em Neon.
-*   **Objetivo:** Transmitir autoridade, segurança e alta tecnologia.
+*   **Objetivo:** Transmitir modernidade e inovação.
 
 ---
 
