@@ -2,7 +2,7 @@
 
 Este projeto foi desenvolvido para o processo seletivo de estágio na **Ellos Design**. O desafio consistiu em criar uma landing page do zero, transformando um esqueleto estrutural em uma interface funcional e moderna.
 
-🔗 **[CLIQUE AQUI PARA VER O PROJETO RODANDO (LIVE) COM BANCO NA NUVEM](https://teste-frontend-developer-22hwny534-ighor-alves-projects.vercel.app/)**
+🔗 **[CLIQUE AQUI PARA VER O PROJETO RODANDO (LIVE) COM BANCO NA NUVEM](https://teste-frontend-developer-prnix3czq-ighor-alves-projects.vercel.app/)**
 
 ---
 
