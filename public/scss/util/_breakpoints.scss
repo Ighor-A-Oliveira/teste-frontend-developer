@@ -1,0 +1,33 @@
+@use 'sass:map';
+@use '../util/functions' as f;
+
+// 700px, 900px, 1440px
+$breakpoints-up: (
+    'sm': f.to-em(576),
+    'md': f.to-em(768),
+    'lg': f.to-em(992),
+    'xl': f.to-em(1200),
+    'xxl': f.to-em(1400),
+    'xxxl': f.to-em(1900)
+);
+
+$breakpoints-down: (
+    'sm': f.to-em(575.98),
+    'md': f.to-em(767.98),
+    'lg': f.to-em(991.98),
+    'xl': f.to-em(1199.98),
+    'xxl': f.to-em(1399.98)
+);
+
+
+@mixin maior-que($size) {
+    @media (min-width: map.get($breakpoints-up, $size)) {
+        @content;
+    }
+}
+
+@mixin menor-que($size) {
+    @media (max-width: map.get($breakpoints-down, $size)) {
+        @content;
+    }
+}

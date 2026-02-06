@@ -1,0 +1,100 @@
+@use '../util/functions' as f;
+@use '../util/' as u;
+
+.faq{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    flex-direction: column;
+    gap:f.to-rem(8);
+    margin: f.to-rem(60) 0;
+
+    h1 {
+        font-family: "Montserrat" , sans-serif;
+        margin: f.to-rem(25) 0;
+    }
+
+    .chevron {
+        transition: transform .2s linear;
+        width: f.to-rem(20);
+    }
+
+    &__accordion:has(.active) .chevron {
+        transform: rotate(180deg);
+    }
+
+    &__accordion  {
+        background-color: #fff;
+        width: f.to-rem(340);
+        border-radius: f.to-rem(8);
+        padding: f.to-rem(25) f.to-rem(10);
+        margin: f.to-rem(5) ;
+        border: 1px solid;
+        border-color: var(--purple-dark);
+        cursor: pointer;
+        box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+
+        @include u.maior-que(md) {
+            width: f.to-rem(550);
+        }
+
+        @include u.maior-que(lg) {
+            width: f.to-rem(700);
+        }
+
+        @include u.maior-que(xl) {
+            width: f.to-rem(900);
+        }
+
+        @include u.maior-que(xxl) {
+            width: f.to-rem(1200);
+        }
+
+        &--header {
+            width: 100%;
+            border: none;
+            background-color: transparent;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: clamp(f.to-rem(12), f.to-rem(10) + 1vw, f.to-rem(18));
+            font-family: "Montserrat", sans-serif;
+            font-weight: 700;
+            cursor: pointer;
+        }
+
+        &--header span{
+            max-width: 100%;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            color: var(--purple-dark);
+        }
+
+        &--body {
+            display: grid;
+            grid-template-rows: 0fr;
+            transition: grid-template-rows 0.4s ease, padding 0.4s ease, opacity 0.3s;
+            overflow: hidden;
+            opacity: 0;          
+            padding: 0 f.to-rem(10);   
+            font-family: "Inter", sans-serif;
+            font-weight: 300;
+            font-size: clamp(f.to-rem(8), f.to-rem(8) + 1vw, f.to-rem(16));
+
+            &.active {
+                grid-template-rows: 1fr;
+                opacity: 1; 
+                padding: f.to-rem(10) f.to-rem(10);
+            }
+
+            p {
+                min-height: 0;   
+                margin: 0;   
+            }
+        }
+
+
+
+    }
+}

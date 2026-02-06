@@ -1,0 +1,119 @@
+@use '../util/functions' as f;
+@use '../util/' as u;
+
+.services {
+    padding-inline: u.to-rem(20);
+    padding: u.to-rem(30) 0;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto auto auto auto auto;
+    background-color: var(--purple-dark);
+    color: var(--text-light);
+    justify-content: center;
+
+    @include u.maior-que(md) {
+        padding-inline: u.to-rem(25);
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto auto auto;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    @include u.maior-que(lg) {
+        padding-inline: u.to-rem(50);
+    }
+
+    @include u.maior-que(xl) {
+        padding-inline: u.to-rem(80);
+    }
+    @include u.maior-que(xxl) {
+        padding-inline: u.to-rem(150);
+    }
+    
+    @include u.maior-que(xxxl) {
+        padding-inline: u.to-rem(300);
+    }
+
+    h1 {
+        margin: f.to-rem(50) 0;
+    }
+    
+    h1,button {
+        
+        text-align: center;
+
+        @include u.maior-que(md) {
+            grid-column: span 2;
+        }
+
+    }
+
+    button {
+        width: u.to-rem(330);
+        margin: f.to-rem(50) auto;
+        padding: u.to-rem(20) u.to-rem(10);
+        border-radius: u.to-rem(10);
+        -webkit-appearance: none;
+        appearance: none;
+        outline: none;
+        box-shadow: none;
+        border: none;
+        background-color: var(--text-light);
+        color: var(--purple-dark);
+        font-family: "Inter", sans-serif;
+        font-size: clamp(f.to-rem(14), f.to-rem(8) + 0.8vw, f.to-rem(20));
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+    }
+
+    button:hover {
+        font-weight: 700;
+        font-size: clamp(f.to-rem(10), f.to-rem(8) + 0.8vw, f.to-rem(20));
+    }
+
+    button:focus {
+        outline: 0;
+    }
+
+    &__container--column {
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        h4,h5 {
+            margin: 0;
+            margin-bottom: u.to-rem(10);
+        }
+    }
+
+    &__container--row {
+        display: flex;
+        align-items: center;
+        max-width: 100%;  
+        height: u.to-rem(175); 
+        margin-bottom: u.to-rem(20);
+        border-radius: u.to-rem(20);
+        padding-inline: u.to-rem(10);
+        margin-inline: u.to-rem(10);
+        transition: all 0.3s ease-in-out;
+        
+
+        @include u.maior-que(xl) {
+            max-width: u.to-rem(500);
+        }
+
+        background-color: var(--purple-light);
+        img {
+            width: u.to-rem(70);
+            filter: brightness(0) invert(1);
+            margin-right: u.to-rem(20);
+        }
+    }
+
+    &__container--row:hover {
+        scale: 1.1;
+    }
+
+}
+

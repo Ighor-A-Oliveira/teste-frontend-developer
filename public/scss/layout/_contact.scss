@@ -1,0 +1,127 @@
+@use '../util/functions' as f;
+@use '../util/' as u;
+
+.contact {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: f.to-rem(50);
+    padding: f.to-rem(50) 0;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding-inline: f.to-rem(20);
+    background-color: var(--text-dark);
+    color: var(--text-light);
+    
+
+
+    @include u.maior-que(lg) {
+        padding-inline: f.to-rem(25);
+        justify-content: space-between;
+        flex-wrap: nowrap;
+    }
+
+    @include u.maior-que(xl) {
+        padding-inline: f.to-rem(80);
+    }
+    @include u.maior-que(xxl) {
+        padding-inline: f.to-rem(150);
+    }
+    
+    @include u.maior-que(xxxl) {
+        padding-inline: f.to-rem(300);
+    }
+    
+
+    &__left {
+        
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @include u.maior-que(lg) {
+            margin-right: f.to-rem(30);
+        }
+
+        
+        color: var(--purple-dark);
+
+        h1{
+            font-weight: 800;
+            font-size: clamp(f.to-rem(22), f.to-rem(16) + 4vw, f.to-rem(36));
+            line-height: 1.1;
+            font-family: "Montserrat", sans-serif;
+            max-width: f.to-rem(600);
+            color: var(--text-light);
+            margin-bottom: f.to-rem(20);
+        }
+
+        h4 {
+            font-weight: 300;
+            font-size: clamp(f.to-rem(16), f.to-rem(12) + 1vw, f.to-rem(20));
+            line-height: 1.6;
+            font-family: "Inter", sans-serif;
+            color: var(--text-light);
+            max-width: f.to-rem(600);
+        }
+
+    }
+
+        
+    
+
+    &__right {
+        width: 100%;
+        border-radius: f.to-rem(10);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--text-light);
+        color: var(--text-dark);
+        text-align: center;
+        padding: f.to-rem(40);
+
+        @include u.maior-que(xl) {
+            width: f.to-rem(900)
+            
+        }
+
+        h3{
+            font-family: "Montserrat", sans-serif;
+            font-weight: 700;
+        }
+
+        h5 {
+            font-family: "Inter", sans-serif;
+            font-weight: 600;
+        }
+
+        button {
+            width: 100%;
+            height: f.to-rem(50);
+            padding: f.to-rem(10) 0;
+            border-radius: f.to-rem(12);
+            font-family: "Inter", sans-serif;
+            font-weight: 700;
+
+            -webkit-appearance: none;
+            appearance: none;
+            outline: none;
+            box-shadow: none;
+            border: none;
+            background-color: var(--text-dark);
+            color: var( --text-light);
+            font-size: clamp(f.to-rem(10), f.to-rem(8) + 0.8vw, f.to-rem(22));
+            font-weight: bold;
+            transition: all 0.3s ease-in-out;
+        }
+        button:hover {
+            cursor: pointer;
+            background-color: var(--purple-dark);
+        }
+    }
+        
+
+}

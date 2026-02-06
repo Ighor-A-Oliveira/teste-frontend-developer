@@ -1,0 +1,39 @@
+@use '../util/functions' as f;
+@use '../util/' as u;
+
+body {
+    margin: 0;
+    min-width: f.to-rem(300);
+    
+}
+
+.main {
+    background-image: linear-gradient(to right, #9926f0, #d122e3);
+    min-height: f.to-rem(500);
+    height: fit-content;
+    padding-inline: f.to-rem(20);
+    padding-bottom: f.to-rem(30);
+
+    @include u.maior-que(md) {
+        padding-inline: f.to-rem(25);
+    }
+
+    @include u.maior-que(lg) {
+        padding-inline: f.to-rem(50);
+    }
+
+    @include u.maior-que(xl) {
+        padding-inline: f.to-rem(80);
+    }
+    @include u.maior-que(xxl) {
+        padding-inline: f.to-rem(150);
+    }
+    
+    @include u.maior-que(xxxl) {
+        padding-inline: f.to-rem(300);
+    }
+}
+
+
+
+
